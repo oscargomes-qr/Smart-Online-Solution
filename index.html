@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Online Solution | Professional Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .service-card:hover { transform: translateY(-10px); transition: 0.3s; }
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="fixed w-full z-50 glass-nav shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Smart Online <span class="text-gray-900">Solution</span></div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-blue-600">Home</a>
+                <a href="#services" class="hover:text-blue-600">Services</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </div>
+            <a href="https://wa.me/97431546020" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Get Started</a>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 px-6 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">Your One-Stop Digital & <span class="text-blue-600">Travel Partner</span></h1>
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Providing expert assistance in Visa processing, IT solutions, and Virtual Assistance with precision and speed.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#services" class="bg-gray-900 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-black">View Services</a>
+                <a href="https://wa.me/97431546020" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-50">Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Our Specialized Services</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-passport text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Visa & Travel</h3>
+                    <p class="text-gray-600 mb-4">Complete assistance with visa documentation, tourist packages, and travel insurance for your peace of mind.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Visa Documentation</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Tourist Packages</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Health/Travel Insurance</li>
+                    </ul>
+                </div>
+
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">IT & Software</h3>
+                    <p class="text-gray-600 mb-4">Keep your hardware updated. We offer software installation, troubleshooting, and system upgrades.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Software Installation</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>System Troubleshoot</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Data Recovery</li>
+                    </ul>
+                </div>
+
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI & Admin Support</h3>
+                    <p class="text-gray-600 mb-4">Leveraging AI automation and professional data entry to scale your business operations.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>AI Automation</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Virtual Assistant</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Data Entry</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-blue-600 py-16 px-6 text-center text-white">
+        <h2 class="text-3xl font-bold mb-4">Ready to get started?</h2>
+        <p class="mb-8 text-blue-100">Contact us now for a fast and reliable service experience.</p>
+        <a href="https://wa.me/97431546020" class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl">
+            Chat on WhatsApp
+        </a>
+    </section>
+
+    <footer class="py-10 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Smart Online Solution. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/97431546020" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-all z-50 animate-bounce">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+</body>
+</html>
