@@ -9,9 +9,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .service-card:hover { transform: translateY(-10px); transition: 0.3s; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .service-card:hover { transform: translateY(-10px); transition: 0.3s; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
         .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
         .gradient-text { background: linear-gradient(90deg, #2563eb, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        @media (max-width: 640px) {
+            .mobile-break { display: block; }
+            .hero-title { font-size: 2.1rem; line-height: 1.2; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -22,11 +27,12 @@
             <div class="hidden md:flex space-x-8 font-medium">
                 <a href="#home" class="hover:text-blue-600 transition">Home</a>
                 <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
                 <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
             </div>
             <div class="flex items-center gap-4">
                 <a href="mailto:jonathonoscar@outlook.com" class="hidden sm:block text-gray-600 hover:text-blue-600"><i class="far fa-envelope text-xl"></i></a>
-                <a href="https://wa.me/97431546020" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition shadow-md">Get Started</a>
+                <a href="https://wa.me/97431546020" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Get Started</a>
             </div>
         </div>
     </nav>
@@ -34,8 +40,10 @@
     <section id="home" class="pt-40 pb-24 px-6 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-white to-white">
         <div class="max-w-7xl mx-auto text-center">
             <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full">Premium Freelance Services</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight">Your One-Stop <span class="gradient-text">Digital Service Partner</span></h1>
-            <p class="text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">Expert assistance in Visa processing, Insurance, IT Troubleshooting, and AI Automations. Professional solutions delivered with speed and accuracy.</p>
+            <h1 class="hero-title text-4xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                Your One Stop <span class="mobile-break"></span> <span class="gradient-text">Digital Service Partner</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">Expert assistance in Visa processing, Website Formation, IT Troubleshooting, and AI Automations.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="https://wa.me/97431546020" class="bg-slate-900 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-black transition-all flex items-center justify-center">
                     <i class="fab fa-whatsapp mr-2 text-xl"></i> WhatsApp Me
@@ -47,51 +55,80 @@
         </div>
     </section>
 
-    <section id="services" class="py-24 px-6">
+    <section id="services" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Comprehensive Solutions</h2>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Our Professional Services</h2>
                 <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 transition-all">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-passport text-3xl"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card bg-white p-6 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-passport text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Visa & Insurance</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">Hassle-free visa processing, travel insurance, and health coverage documentation.</p>
-                    <div class="space-y-3">
-                        <div class="flex items-center text-slate-500 font-medium"><i class="fas fa-circle-check text-blue-500 mr-3 text-sm"></i>Visa Assistance</div>
-                        <div class="flex items-center text-slate-500 font-medium"><i class="fas fa-circle-check text-blue-500 mr-3 text-sm"></i>Travel/Health Insurance</div>
-                        <div class="flex items-center text-slate-500 font-medium"><i class="fas fa-circle-check text-blue-500 mr-3 text-sm"></i>Tourist Packages</div>
-                    </div>
+                    <h3 class="text-xl font-bold mb-2">Visa & Insurance</h3>
+                    <p class="text-sm text-slate-600">Hassle-free visa processing, travel/health insurance and tourist packages.</p>
                 </div>
 
-                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 transition-all">
-                    <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-laptop-medical text-3xl"></i>
+                <div class="service-card bg-white p-6 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-slate-800">IT Solutions</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">Professional laptop software upgrades, installations, and system troubleshooting.</p>
-                    <div class="space-y-3">
-                        <div class="flex items-center text-slate-500 font-medium"><i class="fas fa-circle-check text-indigo-500 mr-3 text-sm"></i>Software Installation</div>
-                        <div class="flex items-center text-slate-500 font-medium"><i class="fas fa-circle-check text-indigo-500 mr-3 text-sm"></i>System Upgrades</div>
-                        <div class="flex items-center text-slate-500 font-medium"><i class="fas fa-circle-check text-indigo-500 mr-3 text-sm"></i>Tech Support</div>
-                    </div>
+                    <h3 class="text-xl font-bold mb-2">Website Formation</h3>
+                    <p class="text-sm text-slate-600">Building professional and responsive websites tailored to your needs.</p>
                 </div>
 
-                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 transition-all">
-                    <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-microchip text-3xl"></i>
+                <div class="service-card bg-white p-6 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-medical text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-slate-800">AI & Automation</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">Scaling your efficiency through Data Entry, Virtual Assistant, and AI tools.</p>
-                    <div class="space-y-3">
-                        <div class="flex items-center text-slate-500 font-medium"><i class="fas fa-circle-check text-purple-500 mr-3 text-sm"></i>AI Automation</div>
-                        <div class="flex items-center text-slate-500 font-medium"><i class="fas fa-circle-check text-purple-500 mr-3 text-sm"></i>Data Entry</div>
-                        <div class="flex items-center text-slate-500 font-medium"><i class="fas fa-circle-check text-purple-500 mr-3 text-sm"></i>Virtual Assistance</div>
+                    <h3 class="text-xl font-bold mb-2">IT & Software</h3>
+                    <p class="text-sm text-slate-600">Expert laptop software upgrades, installations, and tech troubleshooting.</p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-microchip text-xl"></i>
                     </div>
+                    <h3 class="text-xl font-bold mb-2">AI & VA Support</h3>
+                    <p class="text-sm text-slate-600">Smart AI automations, virtual assistant tasks, and accurate data entry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6 bg-blue-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Experience You Can Trust</h2>
+                    <p class="text-slate-700 mb-6 leading-relaxed text-lg">
+                        At <span class="font-bold text-blue-600">Smart Online Solution</span>, my mission is simple: to make your life easier. I combine technical expertise with a customer-first mindset to ensure every project is handled with 100% accuracy and speed.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="font-medium">Fast Turnaround</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="font-medium">Secure Handling</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="font-medium">Expert Support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="font-medium">Affordable Rates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl border-4 border-white text-center">
+                    <div class="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold">SO</div>
+                    <h3 class="text-xl font-bold mb-2">Personalized Approach</h3>
+                    <p class="text-slate-500 text-sm">Whether it's a visa application or a software installation, I treat your task as my priority. Your satisfaction is my only metric of success.</p>
                 </div>
             </div>
         </div>
@@ -99,59 +136,39 @@
 
     <section id="contact" class="py-20 px-6 bg-slate-900 text-white">
         <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4">Contact Me Today</h2>
-                <p class="text-slate-400">Choose your preferred method to reach out. I am highly responsive.</p>
-            </div>
-            
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
-                    <h4 class="text-xl font-bold mb-6">Reach Out Directly</h4>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
                     <div class="space-y-6">
-                        <a href="https://wa.me/97431546020" class="flex items-center group">
-                            <div class="w-12 h-12 bg-green-500/10 text-green-500 rounded-xl flex items-center justify-center mr-4 group-hover:bg-green-500 group-hover:text-white transition">
-                                <i class="fab fa-whatsapp text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-slate-400">WhatsApp Chat</p>
-                                <p class="font-bold">+974 3154 6020</p>
-                            </div>
+                        <a href="https://wa.me/97431546020" class="flex items-center hover:text-green-400 transition">
+                            <i class="fab fa-whatsapp text-2xl text-green-500 mr-4"></i>
+                            <span>+974 3154 6020</span>
                         </a>
-                        <a href="mailto:jonathonoscar@outlook.com" class="flex items-center group">
-                            <div class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-xl flex items-center justify-center mr-4 group-hover:bg-blue-500 group-hover:text-white transition">
-                                <i class="far fa-envelope text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-slate-400">Email Address</p>
-                                <p class="font-bold lowercase">Click to Send Email</p>
-                            </div>
+                        <a href="mailto:jonathonoscar@outlook.com" class="flex items-center hover:text-blue-400 transition">
+                            <i class="far fa-envelope text-2xl text-blue-500 mr-4"></i>
+                            <span class="break-all">jonathonoscar@outlook.com</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-blue-600 p-8 rounded-3xl flex flex-col justify-center items-center text-center">
-                    <h4 class="text-2xl font-bold mb-4 text-white">Need a Quote?</h4>
-                    <p class="mb-8 text-blue-100">Send me your requirements and I will get back to you with the best price.</p>
-                    <a href="mailto:jonathonoscar@outlook.com?subject=Service Inquiry from Website" class="bg-white text-blue-600 w-full py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition shadow-lg">
-                        Email Inquiry Now
+                <div class="bg-blue-600 p-8 rounded-3xl text-center">
+                    <h4 class="text-2xl font-bold mb-4 text-white">Need My Service?</h4>
+                    <p class="mb-6 text-blue-100 text-sm italic font-medium">"I’m ready to help you grow. Send me a message today!"</p>
+                    <a href="mailto:jonathonoscar@outlook.com?subject=Service Inquiry" class="block bg-white text-blue-600 py-3 rounded-xl font-bold hover:bg-slate-100 transition shadow-lg">
+                        Send Email Inquiry
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-slate-500 text-sm border-t border-slate-100">
-        <p class="font-semibold text-slate-900 mb-2">Smart Online Solution</p>
-        <p>&copy; 2026. All rights reserved.</p>
+    <footer class="py-8 text-center text-slate-500 text-xs">
+        <p>&copy; 2026 Smart Online Solution. All rights reserved.</p>
     </footer>
 
     <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-        <a href="mailto:jonathonoscar@outlook.com" class="bg-blue-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-blue-600 transition-all">
-            <i class="far fa-envelope text-2xl"></i>
-        </a>
-        <a href="https://wa.me/97431546020" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-all animate-bounce">
-            <i class="fab fa-whatsapp text-3xl"></i>
-        </a>
+        <a href="mailto:jonathonoscar@outlook.com" class="bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"><i class="far fa-envelope text-xl"></i></a>
+        <a href="https://wa.me/97431546020" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg animate-bounce hover:scale-110 transition-transform"><i class="fab fa-whatsapp text-2xl"></i></a>
     </div>
 
 </body>
